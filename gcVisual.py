@@ -1,7 +1,7 @@
 from tkinter import *
 import math
 import os
-
+import time
 class MainWindow:
 
     def __init__(self, main):
@@ -136,9 +136,13 @@ file_path = "C:/Users/LEE/Downloads/action_history_09_13_102319.pkl"
 
 with open(file_path, 'rb') as f:
     data = pickle.load(f)
-stateList1,stateList2=data.get(0),data.get(1)
-
 app = start_gui()
+
+stateList1,stateList2=data.get(0),data.get(1)
+for i in range(5,0,-1):
+    print(f"Loading: wait for {i} seconds...")
+    time.sleep(1)
+    
 update_states(app, stateList1, stateList2)
 root.mainloop()
 
