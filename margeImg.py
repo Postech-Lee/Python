@@ -91,7 +91,7 @@ for i in range(len(sList1)):
 
 pathIn= image_path
 VideoName='gan'
-pathOut = os.path.join(image_path,'resultVid',VideoName','.mp4')
+pathOut = os.path.join (image_path,'resultVid',VideoName,".mp4")
 path = os.path.join(image_path,'resultImg')
 fps = 24
 import re
